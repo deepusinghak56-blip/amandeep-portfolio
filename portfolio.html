@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amandeep Singh — Social Media Manager | Open to Opportunities</title>
+<meta name="description" content="Amandeep Singh — Social Media Manager with 500K+ followers managed. Open to full-time roles, internships, and freelance collaborations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0b10;
+    --bg-2: #11141d;
+    --card: #181c28;
+    --text: #f3f5fb;
+    --muted: #8b93a8;
+    --line: #252a39;
+    --accent: #ff5e3a;
+    --accent-2: #ffb86b;
+    --grad: linear-gradient(135deg, #ff5e3a 0%, #ffb86b 100%);
+    --glow: 0 10px 40px rgba(255, 94, 58, 0.35);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  a { color: var(--accent-2); text-decoration: none; }
+  a:hover { color: var(--accent); }
+  h1, h2, h3, h4 { font-family: 'Space Grotesk', 'Inter', sans-serif; letter-spacing: -0.5px; }
+
+  /* === Animated background grid + blobs === */
+  .bg-grid {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 50px 50px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  }
+  .blob {
+    position: fixed; border-radius: 50%; filter: blur(90px); z-index: 0;
+    pointer-events: none; opacity: 0.4;
+  }
+  .blob.b1 { top: -120px; left: -120px; width: 450px; height: 450px; background: #ff5e3a; animation: float 14s ease-in-out infinite; }
+  .blob.b2 { top: 50%; right: -150px; width: 500px; height: 500px; background: #ffb86b; opacity: 0.3; animation: float 18s ease-in-out infinite reverse; }
+  .blob.b3 { bottom: -100px; left: 30%; width: 400px; height: 400px; background: #6c5ce7; opacity: 0.2; animation: float 16s ease-in-out infinite; }
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(60px, -50px) scale(1.15); }
+  }
+
+  /* === NAV === */
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(10, 11, 16, 0.8);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    padding: 18px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { font-weight: 700; font-size: 19px; letter-spacing: -0.5px; font-family: 'Space Grotesk', sans-serif; }
+  .logo span { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { color: var(--muted); font-size: 14px; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--text); }
+  .nav-cta {
+    background: var(--grad); color: #fff !important;
+    padding: 9px 18px; border-radius: 10px;
+    font-size: 14px; font-weight: 600;
+    box-shadow: var(--glow);
+    transition: transform 0.2s;
+  }
+  .nav-cta:hover { transform: translateY(-2px); color: #fff !important; }
+
+  /* === HERO === */
+  .hero {
+    position: relative; z-index: 1;
+    max-width: 1200px; margin: 0 auto;
+    padding: 110px 24px 90px;
+    display: grid; grid-template-columns: 1.2fr 1fr;
+    gap: 60px; align-items: center;
+  }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255, 94, 58, 0.1);
+    color: var(--accent-2);
+    border: 1px solid rgba(255, 94, 58, 0.3);
+    padding: 7px 16px; border-radius: 100px;
+    font-size: 13px; font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .badge .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent);
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.4); }
+  }
+  .hero h1 {
+    font-size: 68px; line-height: 1.02;
+    margin: 0 0 22px;
+    font-weight: 700;
+    letter-spacing: -2px;
+  }
+  .hero h1 .gradient {
+    background: var(--grad);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    display: inline-block;
+  }
+  .hero h1 .typed {
+    color: var(--accent-2);
+    border-right: 3px solid var(--accent-2);
+    padding-right: 6px;
+    animation: blink 1s infinite;
+  }
+  @keyframes blink { 50% { border-color: transparent; } }
+  .hero p.lead { color: var(--muted); font-size: 18px; max-width: 540px; margin: 0 0 32px; }
+  .hero p.lead strong { color: var(--text); font-weight: 600; }
+
+  .cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    padding: 14px 26px; border-radius: 12px;
+    font-size: 15px; font-weight: 600;
+    cursor: pointer; transition: all 0.2s;
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'Inter', sans-serif;
+  }
+  .btn-primary {
+    background: var(--grad); color: #fff; border: none;
+    box-shadow: var(--glow);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 50px rgba(255, 94, 58, 0.5); color: #fff; }
+  .btn-ghost {
+    border: 1px solid var(--line); color: var(--text); background: rgba(255,255,255,0.02);
+  }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); background: rgba(255,94,58,0.05); }
+
+  .trust {
+    margin-top: 36px; display: flex; align-items: center; gap: 16px;
+    color: var(--muted); font-size: 13px;
+  }
+  .avatars { display: flex; }
+  .avatars span {
+    width: 38px; height: 38px; border-radius: 50%;
+    border: 2px solid var(--bg);
+    margin-left: -12px;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-weight: 700; font-size: 13px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  .avatars span:first-child { margin-left: 0; }
+  .avatars span:nth-child(1) { background: linear-gradient(135deg, #ff5e3a, #ffb86b); }
+  .avatars span:nth-child(2) { background: linear-gradient(135deg, #6c5ce7, #a29bfe); }
+  .avatars span:nth-child(3) { background: linear-gradient(135deg, #00b894, #55efc4); }
+  .avatars span:nth-child(4) { background: linear-gradient(135deg, #fdcb6e, #e17055); }
+
+  /* === HERO RIGHT: Profile card === */
+  .hero-right { display: flex; justify-content: center; }
+  .profile-card {
+    width: 340px;
+    background: linear-gradient(180deg, rgba(24, 28, 40, 0.9) 0%, rgba(17, 20, 29, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: 32px 28px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+  }
+  .profile-card::before {
+    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 100px;
+    background: var(--grad);
+    opacity: 0.15;
+  }
+  .profile-avatar {
+    width: 100px; height: 100px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: var(--grad);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 36px; font-weight: 700;
+    font-family: 'Space Grotesk', sans-serif;
+    border: 4px solid var(--bg);
+    box-shadow: 0 10px 30px rgba(255, 94, 58, 0.4);
+    position: relative; z-index: 1;
+  }
+  .profile-card h3 {
+    margin: 0 0 4px; text-align: center; font-size: 22px;
+    position: relative; z-index: 1;
+  }
+  .profile-card .role {
+    text-align: center; color: var(--accent-2);
+    font-size: 13px; font-weight: 600;
+    margin-bottom: 20px;
+    position: relative; z-index: 1;
+  }
+  .profile-stats {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 10px; padding: 18px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    position: relative; z-index: 1;
+  }
+  .profile-stat { text-align: center; }
+  .profile-stat .num {
+    font-size: 20px; font-weight: 700;
+    background: var(--grad);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .profile-stat .lbl { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .profile-tags {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-top: 18px; justify-content: center;
+    position: relative; z-index: 1;
+  }
+  .profile-tag {
+    background: rgba(255, 94, 58, 0.1);
+    color: var(--accent-2);
+    padding: 5px 12px; border-radius: 20px;
+    font-size: 11px; font-weight: 600;
+    border: 1px solid rgba(255, 94, 58, 0.2);
+  }
+
+  /* === SECTIONS === */
+  section { padding: 100px 0; position: relative; z-index: 1; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .section-head { text-align: center; margin-bottom: 60px; }
+  .section-tag {
+    display: inline-block;
+    background: rgba(255, 94, 58, 0.1);
+    color: var(--accent-2);
+    border: 1px solid rgba(255, 94, 58, 0.3);
+    padding: 5px 14px; border-radius: 20px;
+    font-size: 12px; font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
+  }
+  .section-title {
+    font-size: 46px; margin: 0 0 14px; font-weight: 700;
+    letter-spacing: -1.5px;
+  }
+  .section-title .gradient {
+    background: var(--grad);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .section-sub { color: var(--muted); max-width: 600px; margin: 0 auto; font-size: 16px; }
+
+  /* === STATS BANNER === */
+  .stats-banner {
+    background: linear-gradient(135deg, rgba(255, 94, 58, 0.08), rgba(255, 184, 107, 0.04));
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: 40px;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .stats-banner::before {
+    content: ""; position: absolute;
+    top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(255, 94, 58, 0.08) 0%, transparent 50%);
+    animation: pulse 4s ease-in-out infinite;
+  }
+  .stat {
+    text-align: center;
+    position: relative; z-index: 1;
+  }
+  .stat .num {
+    font-size: 48px; font-weight: 700;
+    background: var(--grad);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    display: block; line-height: 1;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  .stat .label { color: var(--muted); font-size: 13px; margin-top: 8px; }
+
+  /* === SKILLS === */
+  .skills-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+  }
+  .skill-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 26px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .skill-card::before {
+    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--grad);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .skill-card:hover { transform: translateY(-6px); border-color: rgba(255, 94, 58, 0.4); }
+  .skill-card:hover::before { transform: scaleX(1); }
+  .skill-card .icon-wrap {
+    width: 50px; height: 50px;
+    background: rgba(255, 94, 58, 0.12);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+  .skill-card h4 { margin: 0 0 12px; font-size: 16px; }
+  .skill-card .pills { display: flex; flex-wrap: wrap; gap: 6px; }
+  .pill {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    border: 1px solid var(--line);
+  }
+
+  /* === CASE STUDY === */
+  .case {
+    background: linear-gradient(135deg, rgba(24, 28, 40, 0.9), rgba(17, 20, 29, 0.9));
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: 50px;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .case::before {
+    content: ""; position: absolute;
+    top: -100px; right: -100px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(255, 94, 58, 0.15) 0%, transparent 70%);
+  }
+  .case-tag {
+    display: inline-block;
+    background: rgba(255, 94, 58, 0.15);
+    color: var(--accent);
+    padding: 5px 14px; border-radius: 20px;
+    font-size: 12px; font-weight: 700;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+  }
+  .case h3 { font-size: 30px; margin: 0 0 16px; line-height: 1.2; }
+  .case p { color: var(--muted); margin: 0 0 24px; }
+  .case-results {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 12px; margin-bottom: 28px;
+  }
+  .case-result {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+  }
+  .case-result .num {
+    font-size: 26px; font-weight: 700;
+    background: var(--grad);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  .case-result .lbl { color: var(--muted); font-size: 11px; margin-top: 4px; }
+
+  .chart {
+    background: var(--bg-2);
+    border-radius: 16px;
+    padding: 28px;
+    border: 1px solid var(--line);
+    position: relative; z-index: 1;
+  }
+  .chart h5 {
+    margin: 0 0 20px; color: var(--muted);
+    font-size: 12px; text-transform: uppercase;
+    letter-spacing: 1.5px; font-weight: 600;
+  }
+  .bars { display: flex; align-items: flex-end; gap: 12px; height: 200px; }
+  .bar {
+    flex: 1;
+    background: var(--grad);
+    border-radius: 6px 6px 0 0;
+    transition: transform 0.2s;
+    position: relative;
+  }
+  .bar:hover { transform: scaleY(1.05); }
+  .bar::after {
+    content: attr(data-val);
+    position: absolute; top: -22px; left: 50%; transform: translateX(-50%);
+    color: var(--muted); font-size: 11px;
+  }
+  .bar-labels { display: flex; gap: 12px; margin-top: 10px; color: var(--muted); font-size: 11px; }
+  .bar-labels span { flex: 1; text-align: center; }
+
+  /* === TIMELINE / EXPERIENCE === */
+  .timeline { position: relative; padding-left: 32px; }
+  .timeline::before {
+    content: ""; position: absolute;
+    left: 8px; top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--accent), transparent);
+  }
+  .job {
+    margin-bottom: 32px; position: relative;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 26px 28px;
+    transition: all 0.3s;
+  }
+  .job:hover { border-color: rgba(255, 94, 58, 0.3); transform: translateX(4px); }
+  .job::before {
+    content: ""; position: absolute;
+    left: -32px; top: 32px;
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    background: var(--grad);
+    box-shadow: 0 0 0 4px var(--bg), 0 0 12px rgba(255, 94, 58, 0.5);
+  }
+  .job-head {
+    display: flex; justify-content: space-between; flex-wrap: wrap;
+    margin-bottom: 8px; gap: 8px;
+  }
+  .job h3 { margin: 0; font-size: 19px; }
+  .job .company { color: var(--accent-2); font-weight: 500; }
+  .job .date {
+    color: var(--muted); font-size: 13px;
+    background: rgba(255, 94, 58, 0.1);
+    padding: 4px 10px; border-radius: 8px;
+    border: 1px solid rgba(255, 94, 58, 0.2);
+    font-weight: 600;
+  }
+  .job ul { color: var(--muted); padding-left: 18px; margin: 14px 0 0; }
+  .job li { margin-bottom: 6px; font-size: 14px; }
+
+  /* === EDUCATION === */
+  .edu-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .edu-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 30px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .edu-card::before {
+    content: ""; position: absolute; top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: var(--grad);
+    transform: scaleY(0); transform-origin: top;
+    transition: transform 0.3s;
+  }
+  .edu-card:hover { border-color: rgba(255, 94, 58, 0.3); transform: translateY(-4px); }
+  .edu-card:hover::before { transform: scaleY(1); }
+  .edu-card .year {
+    color: var(--accent); font-size: 13px; font-weight: 700;
+    margin-bottom: 8px; letter-spacing: 0.5px;
+  }
+  .edu-card h4 { margin: 0 0 6px; font-size: 18px; }
+  .edu-card .school { color: var(--accent-2); font-size: 14px; margin-bottom: 12px; font-weight: 500; }
+  .edu-card p { color: var(--muted); font-size: 13px; margin: 0; }
+
+  /* === CONTACT === */
+  .contact {
+    background: linear-gradient(135deg, rgba(255, 94, 58, 0.12), rgba(255, 184, 107, 0.06));
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    padding: 70px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .contact::before {
+    content: ""; position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(255, 94, 58, 0.12) 0%, transparent 50%);
+    animation: pulse 4s ease-in-out infinite;
+  }
+  .contact h2 { font-size: 42px; margin: 0 0 14px; position: relative; letter-spacing: -1.5px; }
+  .contact p { color: var(--muted); margin: 0 auto 30px; max-width: 540px; position: relative; font-size: 16px; }
+  .contact-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; position: relative; margin-top: 28px; }
+  .contact-item {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px 22px;
+    color: var(--text);
+    transition: all 0.2s;
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 14px;
+  }
+  .contact-item:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+  .contact-item .ic { color: var(--accent); }
+
+  footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--muted);
+    font-size: 13px;
+    border-top: 1px solid var(--line);
+    position: relative; z-index: 1;
+  }
+
+  /* === REVEAL ANIMATION === */
+  .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; padding: 70px 24px; text-align: center; }
+    .hero h1 { font-size: 44px; letter-spacing: -1px; }
+    .hero p.lead { margin: 0 auto; }
+    .cta-row { justify-content: center; }
+    .hero-right { order: -1; }
+    .stats-banner { grid-template-columns: repeat(2, 1fr); padding: 24px; }
+    .case { grid-template-columns: 1fr; padding: 28px; }
+    .section-title { font-size: 34px; }
+    .contact h2 { font-size: 30px; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="blob b1"></div>
+<div class="blob b2"></div>
+<div class="blob b3"></div>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">Amandeep<span>.</span></div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#case-study">Case Study</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact" class="nav-cta">Let's Connect →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="about">
+  <div>
+    <div class="badge"><span class="dot"></span> OPEN TO OPPORTUNITIES</div>
+    <h1>
+      Social Media Manager <br>
+      who turns content into <br>
+      <span class="gradient">real growth</span> on <br>
+      <span class="typed" id="typed">Instagram</span>
+    </h1>
+    <p class="lead">
+      BCA student & self-taught social media strategist with <strong>500K+
+      followers managed</strong>. Skilled in reels, content strategy, Meta Ads,
+      and analytics — ready to bring this energy to a full-time role.
+    </p>
+    <div class="cta-row">
+      <a href="mailto:deepusinghak56@gmail.com?subject=Opportunity for Amandeep" class="btn btn-primary">📩 Get in Touch</a>
+      <a href="resume.pdf.png" target="_blank" class="btn btn-ghost">📄 View Resume</a>
+    </div>
+    <div class="trust">
+      <div class="avatars">
+        <span>R</span><span>S</span><span>M</span><span>A</span>
+      </div>
+      <div>Trusted by <strong style="color: var(--text);">50+ brands</strong> & creators</div>
+    </div>
+  </div>
+
+  <div class="hero-right reveal">
+    <div class="profile-card">
+      <div class="profile-avatar">AS</div>
+      <h3>Amandeep Singh</h3>
+      <div class="role">SOCIAL MEDIA MANAGER</div>
+      <div class="profile-stats">
+        <div class="profile-stat"><div class="num">500K+</div><div class="lbl">Followers</div></div>
+        <div class="profile-stat"><div class="num">160K+</div><div class="lbl">YT Subs</div></div>
+        <div class="profile-stat"><div class="num">3+</div><div class="lbl">Brands</div></div>
+      </div>
+      <div class="profile-tags">
+        <span class="profile-tag">📱 Instagram</span>
+        <span class="profile-tag">▶ YouTube</span>
+        <span class="profile-tag">📊 Meta Ads</span>
+        <span class="profile-tag">� Reels</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- STATS BANNER -->
+<section id="results">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">The Numbers</span>
+      <h2 class="section-title">Results that <span class="gradient">speak</span></h2>
+      <p class="section-sub">Real numbers from accounts I've worked on.</p>
+    </div>
+    <div class="stats-banner reveal">
+      <div class="stat"><span class="num">500K+</span><span class="label">Total Followers Managed</span></div>
+      <div class="stat"><span class="num">1M+</span><span class="label">Monthly Views Generated</span></div>
+      <div class="stat"><span class="num">50+</span><span class="label">Brands & Creators Served</span></div>
+      <div class="stat"><span class="num">3+ yrs</span><span class="label">Hands-on Experience</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Toolkit</span>
+      <h2 class="section-title">Skills & <span class="gradient">Tools</span></h2>
+      <p class="section-sub">My toolkit — ready to deploy from day one.</p>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill-card">
+        <div class="icon-wrap">🎨</div>
+        <h4>Design</h4>
+        <div class="pills"><span class="pill">Canva</span><span class="pill">Photoshop</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="icon-wrap">🎬</div>
+        <h4>Video Editing</h4>
+        <div class="pills"><span class="pill">CapCut</span><span class="pill">Premiere Pro</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="icon-wrap">📅</div>
+        <h4>Scheduling</h4>
+        <div class="pills"><span class="pill">Meta Business Suite</span><span class="pill">Buffer</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="icon-wrap">📊</div>
+        <h4>Analytics</h4>
+        <div class="pills"><span class="pill">IG Insights</span><span class="pill">GA4</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="icon-wrap">📣</div>
+        <h4>Ads</h4>
+        <div class="pills"><span class="pill">Meta Ads Manager</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="icon-wrap">🗂️</div>
+        <h4>Planning</h4>
+        <div class="pills"><span class="pill">Notion</span><span class="pill">Trello</span><span class="pill">Sheets</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="icon-wrap">🤖</div>
+        <h4>AI Tools</h4>
+        <div class="pills"><span class="pill">ChatGPT</span><span class="pill">Canva AI</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="icon-wrap">💻</div>
+        <h4>Other</h4>
+        <div class="pills"><span class="pill">MS Office</span><span class="pill">HTML</span><span class="pill">Python</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY -->
+<section id="case-study">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Proof of Work</span>
+      <h2 class="section-title">Featured <span class="gradient">Case Study</span></h2>
+      <p class="section-sub">How I grew a small brand page from zero to 100K in 4 months.</p>
+    </div>
+    <div class="case reveal">
+      <div>
+        <span class="case-tag">📌 INSTAGRAM GROWTH</span>
+        <h3>From 0 to 100K followers in 120 days</h3>
+        <p>
+          A local D2C skincare brand came to me with almost no presence.
+          I rebuilt their content strategy, launched a 90-day reel plan, and
+          ran targeted Meta Ads to amplify the top performers.
+        </p>
+        <div class="case-results">
+          <div class="case-result"><div class="num">100K+</div><div class="lbl">Followers</div></div>
+          <div class="case-result"><div class="num">2.4M</div><div class="lbl">Total Views</div></div>
+          <div class="case-result"><div class="num">+580%</div><div class="lbl">Sales Growth</div></div>
+        </div>
+        <a href="mailto:deepusinghak56@gmail.com?subject=Case Study Discussion" class="btn btn-primary">Discuss This Case →</a>
+      </div>
+      <div class="chart">
+        <h5>Monthly Follower Growth</h5>
+        <div class="bars">
+          <div class="bar" data-val="2K"   style="height: 18%;"></div>
+          <div class="bar" data-val="8K"   style="height: 32%;"></div>
+          <div class="bar" data-val="28K"  style="height: 52%;"></div>
+          <div class="bar" data-val="65K"  style="height: 78%;"></div>
+          <div class="bar" data-val="100K" style="height: 100%;"></div>
+        </div>
+        <div class="bar-labels">
+          <span>Month 1</span><span>Month 2</span><span>Month 3</span><span>Month 4</span><span>Today</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Career</span>
+      <h2 class="section-title">Work <span class="gradient">Experience</span></h2>
+      <p class="section-sub">Hands-on roles that built my skills.</p>
+    </div>
+    <div class="timeline reveal">
+      <div class="job">
+        <div class="job-head">
+          <h3>Social Media Manager & Video Editor <span class="company">— Shivalik Company, Ahmedabad</span></h3>
+          <span class="date">2026 – Present</span>
+        </div>
+        <ul>
+          <li>Managing multiple social media pages with 200K+ combined followers.</li>
+          <li>Creating, shooting, and editing reels for Instagram & Facebook.</li>
+          <li>Running ad campaigns and analyzing performance to drive growth.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-head">
+          <h3>YouTube & Instagram Manager <span class="company">— Om Bhai's Channel</span></h3>
+          <span class="date">2026</span>
+        </div>
+        <ul>
+          <li>Managed YouTube channel with 160K+ subs & Instagram with 30K+ followers.</li>
+          <li>Handled strategy, editing, thumbnails, and analytics end-to-end.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-head">
+          <h3>Content Moderator <span class="company">— ShareChat & Moj App</span></h3>
+          <span class="date">2025 – 2026</span>
+        </div>
+        <ul>
+          <li>Reviewed UGC, handled escalations, kept the community safe.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-head">
+          <h3>Social Media Manager <span class="company">— College Instagram Page</span></h3>
+          <span class="date">2024</span>
+        </div>
+        <ul>
+          <li>Managed official college page with 300K+ followers.</li>
+          <li>Created engaging content and grew reach consistently.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Academics</span>
+      <h2 class="section-title"><span class="gradient">Education</span></h2>
+      <p class="section-sub">My academic background.</p>
+    </div>
+    <div class="edu-grid reveal">
+      <div class="edu-card">
+        <div class="year">2023 – 2027</div>
+        <h4>BCA (Hons)</h4>
+        <div class="school">Parul University, Vadodara</div>
+        <p>Department of Computer Applications — building strong fundamentals in tech and digital systems.</p>
+      </div>
+      <div class="edu-card">
+        <div class="year">2023</div>
+        <h4>12th (Science)</h4>
+        <div class="school">Kendriya Vidyalaya, Ahmedabad Cantt</div>
+        <p>Science stream with a focus on analytical and problem-solving skills.</p>
+      </div>
+      <div class="edu-card">
+        <div class="year">2021</div>
+        <h4>10th</h4>
+        <div class="school">Kendriya Vidyalaya, Ahmedabad Cantt</div>
+        <p>Strong academic foundation with active participation in tech & cultural events.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact reveal">
+      <h2>Let's build something <span class="gradient">together</span></h2>
+      <p>
+        I'm currently open to internships, full-time social media roles, and freelance
+        collaborations. Drop me a message — I usually respond within 24 hours.
+      </p>
+      <div class="cta-row" style="justify-content: center; margin-bottom: 8px;">
+        <a href="mailto:deepusinghak56@gmail.com?subject=Job Opportunity" class="btn btn-primary">� Email Me</a>
+        <a href="https://wa.me/919510603206" target="_blank" class="btn btn-ghost">💬 WhatsApp Me</a>
+      </div>
+      <div class="contact-row">
+        <a class="contact-item" href="mailto:deepusinghak56@gmail.com"><span class="ic">✉</span> deepusinghak56@gmail.com</a>
+        <a class="contact-item" href="tel:9510603206"><span class="ic">📞</span> +91 95106 03206</a>
+        <div class="contact-item"><span class="ic">📍</span> Vadodara, Gujarat, India</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Amandeep Singh · Social Media Manager · Open to Opportunities
+</footer>
+
+<script>
+  // Typing effect
+  const words = ["Instagram", "YouTube", "Facebook", "TikTok"];
+  let wi = 0, ci = 0, deleting = false;
+  const typed = document.getElementById("typed");
+  function tick() {
+    const word = words[wi];
+    if (!deleting) {
+      typed.textContent = word.slice(0, ++ci);
+      if (ci === word.length) { deleting = true; setTimeout(tick, 1500); return; }
+    } else {
+      typed.textContent = word.slice(0, --ci);
+      if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; }
+    }
+    setTimeout(tick, deleting ? 60 : 120);
+  }
+  tick();
+
+  // Reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("visible");
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
